@@ -46,7 +46,7 @@ namespace GoogleMobileAds.Api
                 BindingFlags.Static | BindingFlags.Public);
             this.adLoaderClient = (IAdLoaderClient)method.Invoke(null, new object[] { this });
 
-            Utils.CheckInitialization();
+            GoogleMobileAds.Common.Utils.CheckInitialization();
 
             this.adLoaderClient.OnCustomNativeTemplateAdLoaded +=
                     delegate (object sender, CustomNativeEventArgs args)
